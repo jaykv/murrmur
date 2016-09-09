@@ -1,0 +1,168 @@
+html, body, .container{
+	height: 100%;
+}
+
+body{
+	background-color: #f1f1f1;
+}
+
+a {
+	color: #333;
+}
+
+button {
+	background-color: Transparent;
+	background-repeat:no-repeat;
+	border: none;
+	cursor:pointer;
+	overflow: hidden;
+	outline:none;
+}
+
+textarea
+{
+	resize: none;
+}
+
+li span{
+	display: block;
+}
+
+/*
+	Main columns/rows/containers
+*/
+
+.container{
+	padding-top: 1%;
+}
+
+.row {
+	overflow: hidden;
+}
+
+.row.content.header{
+	background: #d4145a;
+	background: -moz-linear-gradient(45deg, #d4145a 0%, #fbb03b 100%);
+	background: -webkit-linear-gradient(45deg, #d4145a 0%,#fbb03b 100%);
+	background: linear-gradient(45deg, #d4145a 0%,#fbb03b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4145a', endColorstr='#fbb03b',GradientType=1 );
+	
+	margin-bottom: 0px;
+	border-bottom: 0px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-width: 1px 1px 0 1px;
+}
+
+.row.content.header.well{
+	margin-bottom: 0px;
+	border-bottom: 0px;
+}
+
+.row.content.body{
+	background-color: white;
+	padding-left: 0px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-width:0 1px 1px 1px;
+	min-height: 75%;
+}
+
+.row.content.body.well{
+	margin-bottom: 0px;
+	border-bottom: 0px;
+	min-height: 75%;
+}
+
+.row.content.footer{
+	background-color: #f5f5f5;
+	margin-top: 0px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.row.content.footer.well{
+	border-top: 0px;
+}
+
+.left-panel{
+	float: left;
+	padding: 3px 6px 1px 6px;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 2px;
+	color: white;
+}
+
+.left-panel.positive{
+	background: #337ab7;
+}
+
+.left-panel.negative{
+	background: #ff3333;
+}
+
+
+/*
+	Font awesome icons
+*/
+
+.fa-angle-up:hover{
+	color: #337ab7;
+}
+
+.fa-angle-down:hover{
+	color: #337ab7;
+}
+
+.fa-flag:hover{
+	color: red;
+}
+
+.fa-trash:hover{
+	color: #337ab7;
+}
+
+.fa-user{
+	color: white;
+}
+
+.fa-facebook-official:hover{
+	color: #337ab7;
+}
+
+.fa-twitter:hover{
+	color: #337ab7;
+}
+
+/*
+	Sidebar
+*/
+
+.circle{
+	padding: 5px 10px;
+	display: inline-block;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	-moz-box-shadow: 0px 0px 2px #337ab7;
+	-webkit-box-shadow: 0px 0px 2px #337ab7;
+	box-shadow: 0px 0px 2px #337ab7;
+	background-color: #337ab7;
+}
+
+.userInfo
+{
+	padding-bottom: 2%;
+}
+
+/*
+	Account info
+*/
+
+.info{
+	margin-top: 15px;
+}
+
