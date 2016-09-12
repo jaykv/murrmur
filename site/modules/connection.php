@@ -12,6 +12,7 @@ class PDOConnection
 	private $dbname = DB_NAME;
 	
 	private $db_handler;
+	private $statement;
 	private $error;
 	
 	/*
@@ -52,7 +53,7 @@ class PDOConnection
 	public function allResults()
 	{
 		$this->execute();
-		return $this->fetchAll(PDO::FETCH_ASSOC);
+		return $this->statement->fetchAll(PDO::FETCH_ASSOC);
 	}
 	
 	
@@ -96,7 +97,7 @@ class PDOConnection
 		{
 			echo "Error: Type is not null";
 		}
-		$this->bindValue($param, $value, $type);
+		$this->statement->bindValue($param, $value, $type);
 	}
 	
 	/*
@@ -115,7 +116,7 @@ class PDOConnection
 	*/
 	public function debugDumpParams()
 	{
-		return $this->debugDumpParams();
+		return $this->statement->debugDumpParams();
 	}
 	
 	/*
@@ -137,8 +138,9 @@ class PDOConnection
 	*/
 	public function execute()
 	{
-		return $this->execute();
+		return $this->statement->execute();
 	}
+	
 	
 	/*
 		Queries the database
@@ -148,7 +150,7 @@ class PDOConnection
 	*/
 	public function query($q)
     {
-        return $this->db_handler->query($q);
+         $this->statement = $this->db_handler->prepare($q);
     }
 	
 	/*
@@ -159,7 +161,8 @@ class PDOConnection
 	*/
 	public function rowCount()
 	{
-		return $this->rowCount();
+        $this->execute(); // added by indy
+		return $this->statement->rowCount();
 	}
 	
 	/*
@@ -170,7 +173,7 @@ class PDOConnection
 	*/
 	public function oneResult(){
 		$this->execute();
-		return $this->fetch(PDO::FETCH_ASSOC);
+		return $this->statement->fetch(PDO::FETCH_ASSOC);
 	}
 }
 ?>

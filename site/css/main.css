@@ -41,11 +41,7 @@ li span{
 }
 
 .row.content.header{
-	background: #d4145a;
-	background: -moz-linear-gradient(45deg, #d4145a 0%, #fbb03b 100%);
-	background: -webkit-linear-gradient(45deg, #d4145a 0%,#fbb03b 100%);
-	background: linear-gradient(45deg, #d4145a 0%,#fbb03b 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4145a', endColorstr='#fbb03b',GradientType=1 );
+	background-color: #337ab7;
 	
 	margin-bottom: 0px;
 	border-bottom: 0px;
