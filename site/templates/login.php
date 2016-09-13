@@ -43,11 +43,14 @@ $('#login input').keydown(function(e) {
  $("button#submit").click(function(){
          $.ajax({
      type: "POST",
- url: "templates/process.php",
+ url: "process/process_login.php",
  data: $('form.login').serialize(),
          success: function(msg){
+                  // grab the result from backend
+                  if (msg.includes("Success")) {
+                    window.location.reload(true);
+                  }
                  $("#login-message").html(msg)
-        $("#form-content").modal('hide'); 
          },
  error: function(){
  alert("failure");

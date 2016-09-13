@@ -5,7 +5,7 @@
 	}
 	
 	session_destroy();
-	header('Location: ' . $_SERVER['HTTP_REFERER']);
+	header('Location: ../'); // . $_SERVER['HTTP_REFERER']);
 ?>
 
 <div id="logout" class="modal fade" role="dialog">

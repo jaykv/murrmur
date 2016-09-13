@@ -23,15 +23,9 @@
 		<div class="menu-list">
   
 			<ul id="menu-content" class="menu-content collapse out">
-			<?php
-				//logged in
-				// home, top, mine, top users, account info, logout
-				// logged out
-				// home, login, register
-			?>
-				
+			
 				<li>
-					<a href="index.php">
+					<a href="/">
 						<i class="fa fa-home fa-lg"></i> Home
 					</a>
 				</li>
@@ -73,13 +67,19 @@
 						</li>
 						
 						<li>
+							<a href="top-universities.php">
+								<i class="fa fa-graduation-cap fa-lg"></i> Top Universities
+							</a>
+						</li>
+						
+						<li>
 							<a href="settings.php">
 								<i class="fa fa-cog fa-lg"></i> Account info
 							</a>
 						</li>
 
 						<li>
-							<a href="templates/logout.php">
+							<a href="#" onclick="location.href='templates/logout.php';">
 								<i class="fa fa-sign-out fa-lg"></i> Logout
 							</a>
 						</li>

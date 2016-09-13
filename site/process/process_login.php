@@ -1,14 +1,14 @@
 <?php
-
+session_start();
 require_once("/usr/share/nginx/html/inc/inc.php");
+
 
 if(!empty($_POST))
 {
     $email = sanitize($_POST['email']);
     $password = sanitize($_POST['password']);
     if ( !isValidEmail($email) || $email == "" ) {
-        echo "<div class='alert alert-danger'><strong>Error!</strong> Enter a valid Email</div>";
-        //echo "<center><h4><span class='label label-primary' >Enter a valid email address!</span><h4></center>";
+        alert_danger("Enter a valid Email");
         return;
     }
 	else
@@ -22,19 +22,18 @@ if(!empty($_POST))
             if ( $rowCount == 1)
 			{
 				$result = $connection->oneResult();
-                session_start();
 				$_SESSION["handle"] = $result["handle"];
 				$_SESSION["university_id"] = $result["university_id"];
+				$_SESSION["notifications"] = $result["notification"];
+				$_SESSION["topUser"] = $result["isViewableInTop"];
 				$_SESSION["score"] = $result["score"];
 				$_SESSION["user_id"] = $result["user_id"];
 				
-                echo "<div class='alert alert-success'><strong>Success!</strong> Login Successful..</div>";
-                $secondsWait = 1;
-                echo '<meta http-equiv="refresh" content="'.$secondsWait.'">';
+               alert_success("Login Successful");
 			}
             else
 			{
-                echo "<div class='alert alert-danger'><strong>Error!</strong> Invalid Email or Password</div>";
+                alert_danger("Invalid Email or Password");
 			}
 	}
     if (isset($_POST['rememberme'])){

@@ -10,7 +10,7 @@ if(!empty($_POST))
     $email = sanitize($_POST['email']);
     
     if (!isValidEmail($email) || $email == "" ) {
-        echo "<center><h4><span class='label label-primary' >Enter a valid email address!</span><h4></center>";
+        alert_danger("Enter a valid Email");
         return;
     }
 	else
@@ -23,7 +23,7 @@ if(!empty($_POST))
             $rowCount = $connection->rowCount();
             if ( $rowCount == 1)
 			{
-                echo "That account already exists!</br>";
+                alert_danger("That account already exists!");
 				return;
 			}
             else
@@ -34,9 +34,6 @@ if(!empty($_POST))
 				$connection->bind('password', $password);
 				$connection->bind('university', $university);
 				$connection->execute();
-				
-				// need to check to make sure it executed here
-				echo "inserted into database";
 			}
 	}
 
@@ -45,7 +42,7 @@ if(!empty($_POST))
     echo "Password		=".$password."</br>"; 
     echo "Repeat pass   =".$repeatpass."</br>";
     
-    echo "<span class='label label-info' >Successful Login</span>";
+    alert_successful("Registered successfully!");
 }
 
 ?>
