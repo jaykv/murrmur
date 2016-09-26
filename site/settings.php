@@ -7,8 +7,10 @@
 ?>
 
 <div class="row content body well">
-	<?php 
-          require_once('templates/nav.php'); 
+	<div class="regular-navbar">
+		<?php include('templates/nav.php'); ?>
+	</div>
+	<?php
           require_once('templates/settings_body.php'); 
     ?>
 </div>

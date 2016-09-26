@@ -6,19 +6,24 @@
 ?>
 <div class="row content body well">
 
-	<?php require_once('templates/nav.php'); ?>
-
+	<div class="regular-navbar">
+		<?php include('templates/nav.php'); ?>
+	</div>
+	
 	<div class="col-sm-9 main">
 	
-		<table class="table table-striped">
-			<tr>
-				<th>Handle</th>
-				<th>Score</th>
-			</tr>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Handle</th>
+					<th>Score</th>
+				</tr>
+			</thead>
+			<tbody>
 		<?php
 			$connection = new PDOConnection();
-			$connection->query('SELECT * FROM users WHERE university_id = :uni_id ORDER by score DESC');
-			$connection->bind('uni_id', 21);
+			$connection->query('SELECT * FROM users WHERE university_id = :uni_id ORDER by score DESC LIMIT 16');
+			$connection->bind('uni_id', $_SESSION["university_id"]);
 			$results = $connection->allResults();
 			foreach ($results as &$result)
 			{
@@ -30,6 +35,7 @@
 		<?php
 			}
 		?>
+			</tbody>
 		
 		</table>
 	</div>	

@@ -29,7 +29,7 @@
   margin: 0px;
   line-height: 35px;
   cursor: pointer;
-  /*    
+  /*
     .collapsed{
        .arrow:before{
                  font-family: FontAwesome;
@@ -117,19 +117,18 @@
         margin: 0;
         padding: 25px;
         width: auto;
+
     }
 
 }
 
 @media (max-width: 767px) {
-	
   .nav-side-menu {
     position: relative;
     width: 100%;
     margin-bottom: 10px;
-	margin-left: 8px;
-	margin-right: 8px;
   }
+
   .nav-side-menu .toggle-btn {
     display: block;
     cursor: pointer;

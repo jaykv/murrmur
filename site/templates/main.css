@@ -33,7 +33,7 @@ li span{
 */
 
 .container{
-	padding-top: 1%;
+	padding-top: 6%;
 }
 
 .row {
@@ -179,15 +179,7 @@ li span{
 	display: block;
 }
 
-.collapse{
-	display: block;
-}
-
 @media all and (max-width: 767px){
-	.collapse{
-		display: none;
-	}
-	
 	.mobile_expand{
 		display: block;
 		color: white;
@@ -211,7 +203,7 @@ li span{
 	}
 	
 	.mobile-navbar{
-		display: block;
+		display: none;
 	}
 	
 	.regular-navbar{
@@ -219,7 +211,7 @@ li span{
 	}
 	
 	.row.content.body.well{
-		padding-top: 8px;
+		padding-top: 0px;
 		padding-right: 0px;
 	}
 	

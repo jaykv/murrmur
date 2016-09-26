@@ -96,6 +96,32 @@
             </div>
         </div>
         <div class="form-group">
+            <label class="control-label col-xs-4">Post with handle:</label>
+            <div class="col-xs-8">
+                <div class="radio">
+                  <?php
+                      if($_SESSION["anonymous"] == 1)
+                      {
+                  ?>
+                          <label><input type="radio" name="anon" checked="checked" value="1">Yes</label>
+                          <label><input type="radio" name="anon" value="0">No</label>
+                  <?php
+                      }
+                      else
+                      {
+                  ?>
+						  <label><input type="radio" name="anon" value="1">Yes</label>
+						  <label><input type="radio" name="anon" checked="checked" value="0">No</label>
+                  <?php    
+                      }
+                  ?>
+                </div>
+                <div class="info">
+                    Do you want people to know who wrote that bomb post?
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
             <div class="col-xs-4 col-xs-offset-4">
                 <button id="submit-post" type="button" class="form-control btn btn-primary">Save</button>
             </div>

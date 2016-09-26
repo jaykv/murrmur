@@ -3,7 +3,7 @@
 					<a href="#">Privacy</a> | <a href="#">TOS</a>
 				</div>
 				<div class="col-xs-4 text-center">
-					<span>Copyright our site &copy; <?php echo date("Y"); ?></span>
+					<span>Copyright murrmur &copy; <?php echo date("Y"); ?></span>
 				</div>
 				<div class="col-xs-4 text-right">
 					<a href="#">
